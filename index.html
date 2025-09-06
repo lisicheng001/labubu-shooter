@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Labubu Shooter - Play the Cutest Online Shooting Game Free</title>
+    <meta name="description" content="Play Labubu Shooter online for free! Join the adorable Labubu characters in this fun shooting adventure game. Perfect for all ages with cute graphics and engaging gameplay.">
+    <meta name="keywords" content="labubu shooter, labubu game, online shooting game, cute games, free browser games, labubu characters">
+    <link rel="canonical" href="https://labubushooter.com/">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #ffeef8 0%, #f0e6ff 50%, #e6f3ff 100%);
+            min-height: 100vh;
+            color: #4a4a4a;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            box-shadow: 0 2px 20px rgba(255, 182, 193, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, #ff9ec7, #ffb3d9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(255, 158, 199, 0.4);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(45deg, #ff6b9d, #c44569, #9b59b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: bold;
+            text-align: center;
+            margin: 0;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #7b68ee;
+            text-align: center;
+            margin: 10px 0;
+            font-weight: 500;
+        }
+
+        .hero-section {
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .game-container {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 10px 40px rgba(255, 182, 193, 0.2);
+            border: 3px solid #ffb3d9;
+        }
+
+        .game-iframe-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 960px;
+            margin: 0 auto;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .game-iframe-wrapper iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+            display: block;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #c44569;
+            margin: 40px 0 20px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(45deg, #ff9ec7, #ffb3d9);
+            border-radius: 2px;
+        }
+
+        .content-section {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 5px 20px rgba(255, 182, 193, 0.15);
+            border-left: 5px solid #ff9ec7;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, #fff 0%, #ffeef8 100%);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(255, 182, 193, 0.2);
+            border: 2px solid #ffb3d9;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(255, 182, 193, 0.3);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, #ff9ec7, #c44569);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px auto;
+            font-size: 24px;
+            color: white;
+        }
+
+        .feature-card h3 {
+            color: #c44569;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .play-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff6b9d, #c44569);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin: 20px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 107, 157, 0.4);
+        }
+
+        .play-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 107, 157, 0.6);
+        }
+
+        footer {
+            background: linear-gradient(45deg, #c44569, #9b59b6);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .game-container {
+                padding: 20px;
+                margin: 20px 0;
+            }
+
+            .game-iframe-wrapper iframe {
+                height: 400px;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .content-section {
+                padding: 20px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .logo {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .game-iframe-wrapper iframe {
+                height: 300px;
+            }
+
+            .feature-card {
+                padding: 20px;
+            }
+
+            .play-button {
+                padding: 12px 30px;
+                font-size: 1rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .logo {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .sparkle {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sparkle::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transform: rotate(45deg);
+            animation: sparkle 3s linear infinite;
+        }
+
+        @keyframes sparkle {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">🎯</div>
+                <div>
+                    <h1>Labubu Shooter</h1>
+                    <p class="subtitle">The most adorable shooting adventure awaits you!</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <a href="#game" class="play-button sparkle">🎮 Play Now - It's Free!</a>
+            </div>
+        </section>
+
+        <section id="game" class="container">
+            <div class="game-container">
+                <h2>🎯 Play Labubu Shooter Online</h2>
+                <div class="game-iframe-wrapper">
+                    <iframe src="https://html5.gamemonetize.co/klzoqsmeofr7ylbhwhbwy9znj3n4ucsw/" 
+                            title="Labubu Shooter" 
+                            width="960" 
+                            height="600" 
+                            frameborder="0" 
+                            scrolling="no" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="content-section">
+                <h2>🌟 About Labubu Shooter</h2>
+                <p>Welcome to the enchanting world of Labubu Shooter, where cute meets action in the most delightful way possible! This charming online shooting game brings together the beloved Labubu characters in an exciting adventure that's perfect for players of all ages. With its vibrant graphics, engaging gameplay, and adorable character designs, Labubu Shooter offers a unique gaming experience that combines the thrill of shooting games with the irresistible charm of Labubu.</p>
+                
+                <p>Whether you're a longtime fan of Labubu or discovering these lovable characters for the first time, this game promises hours of entertainment with its intuitive controls, colorful environments, and progressively challenging levels. The game is completely free to play and runs directly in your browser - no downloads required!</p>
+            </div>
+        </section>
+
+        <section class="container">
+            <h2>✨ Game Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎮</div>
+                    <h3>Easy Controls</h3>
+                    <p>Simple and intuitive gameplay that anyone can master. Perfect for both beginners and experienced gamers.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌈</div>
+                    <h3>Colorful Graphics</h3>
+                    <p>Stunning visuals featuring the adorable Labubu characters in vibrant, eye-catching environments.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Mobile Friendly</h3>
+                    <p>Play seamlessly on any device - desktop, tablet, or smartphone. Optimized for all screen sizes.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🆓</div>
+                    <h3>Completely Free</h3>
+                    <p>Enjoy unlimited gameplay without any cost. No registration, no downloads, just pure fun!</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏆</div>
+                    <h3>Challenging Levels</h3>
+                    <p>Progress through increasingly exciting levels with unique obstacles and rewards to keep you engaged.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💝</div>
+                    <h3>Family Friendly</h3>
+                    <p>Safe and appropriate content for players of all ages. Perfect for family gaming sessions.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="content-section">
+                <h2>🎯 How to Play Labubu Shooter</h2>
+                <p>Getting started with Labubu Shooter is incredibly easy! Simply click the play button above to launch the game in your browser. Use your mouse or touch controls to aim and shoot, helping your Labubu characters navigate through various challenges and obstacles. The game features progressive difficulty levels, so you'll start with simple targets and gradually face more complex scenarios as you improve your skills.</p>
+                
+                <p>Collect power-ups, unlock new Labubu characters, and discover hidden bonuses as you advance through the game. Each level brings new surprises and delightful animations that showcase the unique personality of these beloved characters. Remember to take breaks and enjoy the charming sound effects and music that make this game truly special!</p>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="content-section">
+                <h2>💖 Why Labubu Fans Love This Game</h2>
+                <p>Labubu Shooter captures everything fans adore about these iconic characters - their playful nature, distinctive design, and irresistible charm. The game stays true to the Labubu aesthetic while adding an exciting gameplay element that keeps players coming back for more. From the moment you start playing, you'll be immersed in a world that celebrates the creativity and whimsy that makes Labubu so special.</p>
+                
+                <p>The attention to detail in character animations, the carefully crafted sound design, and the overall polish of the game demonstrate a deep understanding of what makes Labubu characters so beloved worldwide. Whether you're collecting Labubu figures, following the latest releases, or simply enjoy cute and engaging games, Labubu Shooter offers the perfect digital playground to explore.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Labubu Shooter. Play the cutest shooting game online for free!</p>
+            <p>🎮 Ready to play? Scroll up and start your Labubu adventure now! 🌟</p>
+        </div>
+    </footer>
+</body>
+</html>
