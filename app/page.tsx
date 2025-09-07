@@ -46,5 +46,35 @@ export const metadata: Metadata = {
 }
 
 export default function LabubuShooterPage() {
-  return <LabubuShooterPageClient />
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Labubu Gaming Hub",
+    url: "https://labubushooter.com",
+    description: "Play amazing online games featuring Labubu characters and other exciting adventures",
+    publisher: {
+      "@type": "Organization",
+      name: "Labubu Gaming Hub",
+    },
+    mainEntity: {
+      "@type": "Game",
+      name: "Labubu Shooter",
+      description: "Join Labubu in an adorable shooting adventure! Play online for free.",
+      genre: "Shooting Game",
+      gamePlatform: "Web Browser",
+      operatingSystem: "Any",
+      applicationCategory: "Game",
+    },
+    potentialAction: {
+      "@type": "PlayAction",
+      target: "https://labubushooter.com",
+    },
+  }
+
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
+      <LabubuShooterPageClient />
+    </>
+  )
 }

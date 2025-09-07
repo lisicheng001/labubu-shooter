@@ -7,23 +7,24 @@ import { Suspense } from "react"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Labubu Shooter - Play the Cutest Online Shooting Game Free",
+  title: "Labubu Gaming Hub - Play the Cutest Online Games Free",
   description:
-    "Join Labubu in an adorable shooting adventure! Play Labubu Shooter online for free - the cutest bubble shooter game featuring everyone's favorite character.",
+    "Play amazing online games featuring Labubu characters including Labubu Shooter, Arrow Survival, and more exciting adventures!",
   generator: "Next.js",
-  applicationName: "Labubu Shooter",
+  applicationName: "Labubu Gaming Hub",
   referrer: "origin-when-cross-origin",
   keywords: [
     "labubu shooter",
     "labubu game",
-    "online shooting game",
-    "bubble shooter",
+    "online games",
+    "free games",
+    "arrow survival",
     "cute games",
-    "free online games",
+    "browser games",
   ],
-  authors: [{ name: "Labubu Shooter Team" }],
-  creator: "Labubu Shooter",
-  publisher: "Labubu Shooter",
+  authors: [{ name: "Labubu Gaming Hub Team" }],
+  creator: "Labubu Gaming Hub",
+  publisher: "Labubu Gaming Hub",
   formatDetection: {
     email: false,
     address: false,
@@ -31,13 +32,13 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL("https://labubushooter.com"),
   alternates: {
-    canonical: "/",
+    canonical: "https://labubushooter.com", // Made canonical URL absolute for consistency
   },
   openGraph: {
-    title: "Labubu Shooter - Play the Cutest Online Shooting Game Free",
-    description: "Join Labubu in an adorable shooting adventure! Play online for free.",
+    title: "Labubu Gaming Hub - Play the Cutest Online Games Free",
+    description: "Play amazing online games featuring Labubu characters and exciting adventures!",
     url: "https://labubushooter.com",
-    siteName: "Labubu Shooter",
+    siteName: "Labubu Gaming Hub",
     locale: "en_US",
     type: "website",
   },
