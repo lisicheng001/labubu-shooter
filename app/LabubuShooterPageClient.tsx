@@ -10,6 +10,35 @@ export default function LabubuShooterPageClient() {
 
   const games = [
     {
+      id: "featured-game",
+      title: "🌟 Labubu Geometry Dash", // Updated title from "Featured Adventure" to "Labubu Geometry Dash"
+      description: "Join adorable Labubu in the most dreamy geometry adventure!", // Updated description to match Geometry Dash theme
+      cover: "/featured-game-cover.jpg",
+      iframe: "https://html5.gamemonetize.co/qge3r3syyxhvzxjf6cb5oe0rq9bk9uxh/",
+      badge: "FEATURED",
+      gradient: "from-violet-50/90 via-purple-50/80 to-pink-50/90",
+      borderColor: "border-violet-200/40",
+      rating: 4.9,
+      views: "3.2M",
+      comments: [
+        {
+          user: "DreamyGamer",
+          text: "This Labubu Geometry Dash is absolutely magical! The cutest geometric adventure ever ✨", // Updated comment to reference Geometry Dash
+          time: "30 minutes ago",
+        },
+        {
+          user: "LabubuFan2024",
+          text: "Perfect blend of Labubu cuteness and geometry challenges! So dreamy and fun 🌸", // Updated comment to reference Geometry Dash
+          time: "1 hour ago",
+        },
+        {
+          user: "PastelPlayer",
+          text: "The Labubu Geometry Dash lives up to the hype! Absolutely stunning geometric visuals", // Updated comment to reference Geometry Dash
+          time: "2 hours ago",
+        },
+      ],
+    },
+    {
       id: "labubu-shooter",
       title: "🌸 Labubu Shooter",
       description: "Join adorable Labubu in the sweetest shooting adventure!",
@@ -274,8 +303,68 @@ export default function LabubuShooterPageClient() {
       </header>
 
       <main className="container mx-auto px-4 py-8 relative z-10">
+        {/* Featured Game Section */}
+        <div className="mb-12">
+          <div className="text-center mb-8">
+            <h2 className="text-4xl font-bold bg-gradient-to-r from-violet-600 via-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">
+              ⭐ Featured Game ⭐
+            </h2>
+            <p className="text-lg text-card-foreground/80">The most magical gaming experience in our collection!</p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <div
+              className="glass-morphism rounded-3xl p-8 border border-violet-200/40 relative overflow-hidden group hover:scale-105 transition-all duration-500 cursor-pointer labubu-shadow hover:shadow-xl"
+              onClick={() => openModal("featured-game")}
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-violet-50/90 via-purple-50/80 to-pink-50/90 opacity-60"></div>
+              <div className="relative z-10">
+                <div className="grid md:grid-cols-2 gap-8 items-center">
+                  <div>
+                    <img
+                      src="/featured-game-cover.jpg"
+                      alt="Labubu Geometry Dash Game Cover"
+                      className="w-full h-64 object-cover rounded-2xl shadow-lg group-hover:shadow-xl transition-all duration-500"
+                    />
+                  </div>
+                  <div>
+                    <div className="flex items-center mb-4">
+                      <h3 className="text-3xl font-bold text-card-foreground mr-4">🌟 Labubu Geometry Dash</h3>{" "}
+                      {/* Updated featured game display title */}
+                      <div className="bg-gradient-to-r from-violet-500 to-purple-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        FEATURED
+                      </div>
+                    </div>
+                    <p className="text-card-foreground/80 text-lg mb-6">
+                      Join adorable Labubu in the most dreamy geometry adventure!{" "}
+                      {/* Updated featured game display description */}
+                    </p>
+                    <div className="flex items-center justify-between mb-6">
+                      <div className="flex items-center">
+                        <div className="flex text-yellow-400 text-lg">
+                          {[...Array(5)].map((_, i) => (
+                            <span key={i}>⭐</span>
+                          ))}
+                        </div>
+                        <span className="ml-2 text-lg font-bold text-card-foreground">4.9</span>
+                      </div>
+                      <div className="flex items-center text-card-foreground/70">
+                        <span className="mr-1">👁️</span>
+                        <span className="font-medium text-lg">3.2M views</span>
+                      </div>
+                    </div>
+                    <button className="w-full px-6 py-4 bg-gradient-to-r from-violet-500 to-purple-500 text-white font-bold rounded-full hover:scale-105 transition-all duration-300 shadow-lg text-lg">
+                      🌟 Play Featured Game 🌟
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-16">
-          {games.map((game) => (
+          {games.slice(1).map((game) => (
             <div
               key={game.id}
               className={`glass-morphism rounded-3xl p-6 border ${game.borderColor} relative overflow-hidden group hover:scale-105 transition-all duration-500 cursor-pointer labubu-shadow hover:shadow-xl`}
@@ -450,7 +539,7 @@ export default function LabubuShooterPageClient() {
                   <h3 className="font-bold text-xl text-card-foreground mb-3 group-hover:text-primary transition-colors duration-300">
                     {item.title}
                   </h3>
-                  <p className="text-card-foreground/80 text-base leading-relaxed font-medium">{item.desc}</p>
+                  <p className="text-lg text-card-foreground/80 leading-relaxed mb-8 font-medium">{item.desc}</p>
                 </div>
               ))}
             </div>
